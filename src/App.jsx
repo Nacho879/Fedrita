@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from '@/hooks/useAuth.jsx';
@@ -15,6 +14,7 @@ import CreateEmployee from '@/pages/CreateEmployee';
 import MyEmployees from '@/pages/MyEmployees';
 import EmployeesSalon from '@/pages/EmployeesSalon';
 import CreateAppointment from '@/pages/CreateAppointment';
+import EditAppointment from '@/pages/EditAppointment';
 import MyAppointments from '@/pages/MyAppointments';
 import AppointmentsSalon from '@/pages/AppointmentsSalon';
 import MyClients from '@/pages/MyClients';
@@ -222,6 +222,14 @@ function App() {
               element={
                 <AdminOrManagerRoute>
                   <CreateAppointment />
+                </AdminOrManagerRoute>
+              }
+            />
+            <Route
+              path="/editar-reserva/:id"
+              element={
+                <AdminOrManagerRoute>
+                  <EditAppointment />
                 </AdminOrManagerRoute>
               }
             />
